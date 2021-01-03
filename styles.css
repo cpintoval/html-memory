@@ -1,0 +1,16 @@
+code {
+  padding: 2px 3px 1px;
+  border: 1px solid rgba(29, 28, 29, 0.13);
+  border-radius: 3px;
+  background-color: rgba(29, 28, 29, 0.04);
+  color: #e01e5a;
+  font-family: monospace;
+}
+
+input {
+  padding: 4px 8px;
+}
+
+#referral {
+  color: blue;
+}

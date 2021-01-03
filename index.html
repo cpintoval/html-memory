@@ -1,1 +1,118 @@
-<h1>Hello, world!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tags Memory Game</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-200">
+
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold leading-tight text-gray-900">
+        HTML Tags Memory Test
+      </h1>
+      <p>How many HTML tags can you remember?</p>
+    </div>
+  </header>
+  <main>
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      <!-- Content Area -->
+      <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+        <div class="md:grid md:grid-cols-4 md:gap-6">
+          <div class="md:col-span-2">
+            <div class="px-4 py-5 sm:px-6">
+              <noscript>You need to enable JavaScript to make guesses.</noscript>
+              <form id="form">
+                <div class="shadow sm:ounded-md sm:overflow-hiddenr"></div>
+                  <div class="px-3 py-4 bg-white space-y-4 sm:p-4">
+                    <div class="grid grid-cols-6 gap-6">
+                      <div class="col-span-6 sm:col-span-4">
+                        <label for="guess" class="block text-sm font-medium text-gray-700">
+                          Tag
+                        </label>
+                        <div class="mt-1 flex rounded-md shadow-sm">
+                          <input id="guess" type="text" autofocus autocomplete="off" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-md shadow-sm sm:text-sm border-gray-900" placeholder="Type you guess here...">
+                          <button id="button" type="submit" aria-controlls="remains" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Guess</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="md:col-span-1">
+            <div class="px-4 py-5 sm:px-6">
+              <div class="grid grid-cols-1 gap-1 text-center">
+                <div class="col-span-1 sm:col-span-1"></div>
+                <div class="col-span-1 sm:col-span-1"></div>
+                <div class="col-span-1 sm:col-span-1">
+                  <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+                    <span id="remain" role="status" aria-live="polite">116</span>
+                  </h2>
+                </div>
+                <div class="col-span-1 sm:col-span-1"></div>
+                <div class="col-span-1 sm:col-span-1">
+                  Tags left
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-1">
+            <div class="px-4 py-5 sm:px-6">
+              <div class="grid grid-cols-1 gap-1 text-center">
+                <div class="col-span-1 sm:col-span-1"></div>
+                <div class="col-span-1 sm:col-span-1"></div>
+                <div class="col-span-1 sm:col-span-1">
+                  <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
+                    <span id="total-guessed" role="status" aria-live="polite">0</span>
+                  </h2>
+                </div>
+                <div class="col-span-1 sm:col-span-1"></div>
+                <div class="col-span-1 sm:col-span-1">
+                  Tags Guessed
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <!-- Start table -->
+      <div class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <table id="guessed-table" class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      #
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Tag
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+    
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- End table -->
+
+      <!-- /End Content Area -->
+      <p><small>Original 'HTML Tags Memory Test' game developed by <a id="referral" href="https://codepen.io/plfstr" target="_blank">plfstr</a></small></p>
+    </div>
+  </main>
+</div>
+  <script src="logic.js"></script>
+</body>
+</html>
